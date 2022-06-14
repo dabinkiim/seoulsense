@@ -1,0 +1,153 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+:root {
+  --cA: cornsilk; //light
+  --cB: aquamarine; / /point 
+}
+
+html, body {
+  word-break: keep-all;
+  font-size: 25px;
+  line-height: 1.5;
+  font-family: bc-sklonar, adobe-gothic-std, sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  font-family: adobe-gothic-std, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  background: white;
+}
+
+a {
+  text-decoration: none;
+  color: silver;
+}
+a:visited {}
+a:hover {}
+
+ul, li {
+  list-style: none;
+}
+
+
+/* 헤더 */
+header {
+  font-size: 1.5rem;
+  text-align: center;
+  z-index: 99;
+}
+button {
+  background: none;
+  border: none;
+  font-family: adobe-gothic-std, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+header .info {display: none; font-size: 1rem;}
+
+/* 메인 */
+
+#sentence_box {
+  border-bottom: 1px dashed white;
+  position: fixed;
+  width: 50vw;
+  height: 1rem;
+  left: .5rem;
+  top: .5rem;
+  font-size: .5rem;
+}
+
+#sentence_box p {
+  text-align: left; 
+  color: white;
+}
+
+#backA, #backB {
+  position: fixed;
+  top: 0;
+  width: 60vw;
+  height: 100vh;
+  mix-blend-mode: multiply;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+#backA {left: 0; background-image: url(source/symbol1.png);   background-position: top;}
+#backB {right: 0; background-image: url(source/symbol2.png);   background-position: bottom;}
+
+#category {
+  position: fixed;
+  padding: .5rem;
+  bottom: .5rem;
+  text-align: left;
+}
+
+
+
+/* 키워드 */
+#sheet li.work {
+  z-index: 5;
+  max-width: 15vw;
+  display: inline-block;
+  border-radius: 48%;
+  margin: 1rem;
+  padding: .25rem;
+  position: fixed;
+  /*background: darkslategrey; */
+  color: var(--cA);
+  mix-blend-mode: difference;
+  text-align: center;
+  display: flex;
+    flex-direction: row-reverse;
+    align-content: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+
+#sheet li .word {
+  display: none;
+  padding: 0 .2rem;
+}
+
+.word_show {
+  background: transparent;
+  color: black;
+  border: 1px solid white;
+}
+
+/*  감각 2 */
+h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  font-size: 4vw;
+  text-shadow: .125rem .125rem .25rem rgba(0,0,0,.75);
+  color: white;
+  text-align: center;
+}
+
+#title_2 {
+  position: absolute; 
+  text-align: center;
+  color: white; 
+  text-shadow: .125rem .125rem .25rem rgba(255,255,255,.75);
+  top: 1.5rem; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  font-size:2rem; z-index: 999;}
+
